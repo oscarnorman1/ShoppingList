@@ -28,10 +28,7 @@ $(function () {
             "</tr>"
         );
       }
-    } else {
-      alert("Array is empy!");
     }
-
   }
 
   $("#button").on("click", function () {
@@ -62,7 +59,7 @@ $(function () {
     }
   });
 
-  $(document).on("click",".remove",function () {
+  $(document).on("click", ".remove", function () {
     let temp = $(this).closest("tr").find("#articleValue").text().trim();
     $(this).closest("tr").remove();
     console.log(temp);
@@ -74,7 +71,7 @@ $(function () {
     localStorage.setItem("array", JSON.stringify(storageArray));
   });
 
-  $(document).on("click", ".form-check-input" ,function () {
+  $(document).on("click", ".form-check-input", function () {
     if ($(this).is(":checked")) {
       $(this).closest("tr").css("background-color", "#00FF00");
     } else {
